@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>微景智成</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="imgs/page/1.png" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> -->
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            /* CSS样式用于控制视频大小 */
+            video {
+                width: 100%; /* 设置视频宽度为100%页面宽度 */
+                max-width: 300px; /* 设置最大宽度，防止视频过大 */
+                height: auto; /* 根据宽度自动调整高度，以保持视频比例 */
+                display: block; /* 移除默认的边距 */
+                margin: 0 auto; /* 水平居中 */
+            }
+        </style>
+    </head>
+    <body class="d-flex flex-column h-100">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/mhDoLbDldZc3qpsJHpLogda//BVZbgYuw6kof4u2FrCedxOtgRZDTHgHUhOCVim" crossorigin="anonymous"></script>
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container px-5">
+                    <a class="navbar-brand  fw-bold fs-4 text-bg-dark" href="index.html">微景智成</a>
+                    <!-- <a class="navbar-brand" href="#">
+                        <img src="imgs/page/1.png" alt="Logo 1" width="30" height="30" class="d-inline-block align-text-top">
+                        <img src="imgs/page/3.jpg" alt="Logo 2" width="32" height="30" class="d-inline-block align-text-top">
+                    </a> -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="index.html">首页</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">AI创意设计</a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
+                                    <li><a class="dropdown-item" href="text2img.html">盆景设计生成</a></li>
+                                    <li><a class="dropdown-item" href="">盆景三维模型</a></li>
+                                </ul>
+                            </li>
+                            <!-- <li class="nav-item"><a class="nav-link" href="about.html">AI创意设计</a></li> -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">AI生产辅助</a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
+                                    <li><a class="dropdown-item" href="">盆景创意构思</a></li>
+                                    <li><a class="dropdown-item" href="img2img.html">胚苗创意设计</a></li>
+                                </ul>
+                            </li>
+                            <!-- <li class="nav-item"><a class="nav-link" href="contact.html">AI生产辅助</a></li> -->
+                            <!-- <li class="nav-item"><a class="nav-link" href="pricing.html">创新测试功能</a></li> -->
+                            <li class="nav-item"><a class="nav-link" href="">关于</a></li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Page Content-->
+            <section class="py-5 bg-light">
+                <div class="container px-5">
+                    <div class="card border-0 shadow rounded-3 overflow-hidden">
+                        <div class="card-body p-0">
+                            <div class="row gx-0">
+                                <div class="col-lg-7 col-xl-6 py-lg-5">
+                                    <div class="p-4 p-md-5">
+                                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
+                                        <div class="h2 fw-bolder">灵感之言，艺术盆景之奇迹。</div>
+                                        <p>输入你的创意，获得独一无二的盆景设计。</p>
+                                        <a class="stretched-link text-decoration-none" href="#!">
+                                            <!-- Read more
+                                            <i class="bi bi-arrow-right"></i> -->
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-xl-5"><div class="bg-featured-blog" style="background-image: url('imgs/page/4.JPG')"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container px-5 my-5">
+                    <h3 class="display-6 fw-light mb-2">点亮灵感:输入诗句或关键词</h3>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" style="height: 10rem" id="textInput" type="text" placeholder="云想衣裳花想容，春风拂槛露华浓" data-sb-validations="required" />
+                        <label for="name">输入关键词或描述</label>
+                        <div class="invalid-feedback" data-sb-feedback="name:required"></div>
+                    </div>
+                    <!-- <div class="mb-3">
+                        <h3 class="display-6 fw-light mb-2">点亮灵感:输入诗句或关键词</h3>
+                        <div class="form-group">
+                            <label for="textInput" class="fw-bold"></label>
+                            <textarea class="form-control" id="textInput" placeholder="云想衣裳花想容，春风拂槛露华浓。" rows="4"></textarea>
+                        </div>
+                    </div> -->
+                    <button id="generateButton" style="display: block;" class="btn btn-lg btn-primary" href="#!" onclick="sendPostRequest()">设计</button>
+                    <button id="loadingButton"  class="btn btn-primary" type="button" disabled style="display: none;">
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        设计中...
+                      </button>
+                </div>
+            
+            
+            </section>
+
+            <section class="py-2" id="case">
+                <div class="container px-5 my-5">
+                    <div class="text-center mb-5">
+                        <h1 class="fw-bolder">盆景设计展示</h1>
+                        <p class="lead fw-normal text-muted mb-0">关键词/诗句</p>
+                    </div>
+                    <div class="row gx-5">
+                        <div class="col-lg-6">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-3 mb-3" src="imgs/text2img/p1.png" alt="..." />
+                                <a class="h3 fw-bolder text-decoration-none link-dark stretched-link d-flex justify-content-center" href="#!">白日依山尽，黄河入海流。</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-3 mb-3" src="imgs/text2img/p2.png" alt="..." />
+                                <a class="h3 fw-bolder text-decoration-none link-dark stretched-link d-flex justify-content-center" href="#!">云想衣裳花想容，春风拂槛露华浓。</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="position-relative mb-5 mb-lg-0">
+                                <img class="img-fluid rounded-3 mb-3" src="imgs/text2img/p4.png" alt="..." />
+                                <a class="h3 fw-bolder text-decoration-none link-dark stretched-link d-flex justify-content-center" href="#!">热带雨林组景</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="position-relative">
+                                <img class="img-fluid rounded-3 mb-3" src="imgs/text2img/p3.png" alt="..." />
+                                <a class="h3 fw-bolder text-decoration-none link-dark stretched-link d-flex justify-content-center" href="#!">苔藓微景观</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-5">
+                <div class="container px-5 my-5">
+
+
+                    <div id="responseContainer" class="row">
+                        
+                    </div>
+                </div>
+            </section>
+
+            
+            
+        </main>
+        <!-- Footer-->
+        <footer class="bg-dark py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; 香港科技大学（广州） 人工智能学域 熊辉教授团队 2023</div></div>
+                    <div class="col-auto">
+                        <a class="link-light small" href="#!">隐私</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <!-- <a class="link-light small" href="#!">Terms</a>
+                        <span class="text-white mx-1">&middot;</span> -->
+                        <a class="link-light small" href="#!">联系</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script>
+
+        function sendPostRequest() {
+            var caseSection = document.getElementById("case");
+            var generateButton = document.getElementById("generateButton");
+            var loadingButton = document.getElementById("loadingButton");
+            caseSection.style.display = "none";
+            // 切换到Loading按钮
+            generateButton.style.display = "none";
+            loadingButton.style.display = "block";
+
+            var textInput = document.getElementById("textInput").value;
+            var apiUrl1 = 'http://localhost:7861/sdapi/v1/txt2img'; // 第一个API端点的URL
+            var apiUrl2 = 'http://localhost:7862/chat'; // 第二个API端点的URL
+            
+            var instPrompt = `
+# Stable Diffusion prompt 助理
+
+你来充当一位有艺术气息的Stable Diffusion prompt 助理。
+
+## 任务
+
+我希望你生成和盆景有关的主题，画面中必须包含：
+-主树：盆景的核心，通常是一棵或几棵小树。主树的选择、修剪和培养是盆景艺术的关键。常见的树种包括松、柏、榆、柳、枫等。 -辅助植物：为了增加盆景的层次感和丰富性，通常会种植一些辅助植物，如草、苔藓、小花、小灌木等。 -盆器：用于种植盆景的容器。盆器的选择对盆景的整体效果有很大的影响。传统的盆器通常是陶瓷制成的，形状、颜色和大小都要与盆景的风格和规模相匹配。 -山石：在盆景中，山石可以模仿真实的山脉和岩石，为盆景增加自然和真实感。选择的石头应该与盆景的风格和规模相匹配。 -水景：一些盆景会加入小池塘、溪流或瀑布，模仿真实的水景。这通常是通过使用透明的树脂或玻璃碎片来实现的。 -底层土壤：为了确保盆景的健康成长，需要选择合适的土壤。盆景土壤通常是由沙、泥炭和腐叶土混合而成的，以确保良好的排水和适当的营养。 -装饰品：为了增加盆景的趣味性和美观性，有时会加入一些小型的装饰品，如小桥、亭子、小人物雕像等。 
+我用自然语言告诉你要生成的prompt的主体植物，你的任务是根据这个主题想象一幅完整的画面，包含以上要素，然后转化成一份详细的、高质量的prompt，让Stable Diffusion可以生成高质量的图像。
+
+## 背景介绍
+
+Stable Diffusion是一款利用深度学习的文生图模型，支持通过使用 prompt 来产生新的图像，描述要包含或省略的元素。
+
+## prompt 概念
+
+- 完整的prompt包含“**Prompt:**”和"**Negative Prompt:**"两部分。
+- prompt 用来描述图像，由普通常见的单词构成，使用英文半角","做为分隔符。
+- negative prompt用来描述你不想在生成的图像中出现的内容。
+- 以","分隔的每个单词或词组称为 tag。所以prompt和negative prompt是由系列由","分隔的tag组成的。
+
+## () 和 [] 语法
+
+调整关键字强度的等效方法是使用 () 和 []。 (keyword) 将tag的强度增加 1.1 倍，与 (keyword:1.1) 相同，最多可加三层。 [keyword] 将强度降低 0.9 倍，与 (keyword:0.9) 相同。
+
+## Prompt 格式要求
+
+下面我将说明 prompt 的生成步骤，这里的 prompt 可用于描述物体或组合方式。你可以根据需要添加合理的、但不少于5处的画面细节。
+
+### 1. prompt 要求
+
+- 你输出的 Stable Diffusion prompt 以“**Prompt:**”开头。
+- 每一条prompt都固定包含以下内容：(masterpiece, best quality, high quality, highres, ultra-detailed),high quality, realistic, landscapes, (bonsai), (masterpiece, best quality, high quality, highres, ultra-detailed)。其余内容可自行添加。
+- prompt 内容包含画面主体、附加细节、色彩色调、灯光等部分，但你输出的 prompt 不能分段，例如类似"medium:"这样的分段描述是不需要的，也不能包含":"和"."。
+- 画面主体：不简短的英文描述画面主体, 如 A girl in a garden，主体细节概括（主体可以是人、事、物、景）画面核心内容。这部分根据我每次给你的主题来生成。你可以添加更多主题相关的合理的细节。
+- 附加细节：描述画面细节内容，让图像看起来更充实和合理。这部分是可选的，要注意画面的整体和谐，不能与主题冲突。
+- 色彩色调：颜色，通过添加颜色来控制画面的整体颜色。
+- 灯光：整体画面的光线效果。
+
+### 2. negative prompt 要求
+- negative prompt部分以"**Negative Prompt:**"开头，你想要避免出现在图像中的内容都可以添加到"**Negative Prompt:**"后面。
+- 每一条negative prompt都固定包含以下内容：(worst quality, low quality, normal quality),(worst quality, low quality, normal quality),  easynegative, FastNegativeV2。其余内容可自行添加。
+
+### 3. 限制：
+- tag内容用英语单词或短语来描述，并不局限于我给你的单词。注意只能包含关键词或词组。
+- 注意不要输出句子，不要有任何解释。
+- tag数量限制40个以内，单词数量限制在60个以内。
+- tag不要带引号("")。
+- 使用英文半角","做分隔符。
+- tag 按重要性从高到低的顺序排列。
+- 我给你的主题可能是用中文描述，你给出的prompt和negative prompt只用英文。
+
+注意：! 所有prompt中必须包含bonsai；所有negative prompt中增加 logo, watermark, animals, easynegative,ng_deepnegative_v1_75t
+
+### 4.示例：
+Prompt: (masterpiece, best quality, high quality, highres, ultra-detailed),high quality, realistic, landscapes, pavilions, artificial mountains, trees, peonies, small bridges,<lora:ShanShuiHua_v16:0.7>,(miniature),(bonsai), (masterpiece, best quality, high quality, highres, ultra-detailed)
+Negative prompt: (worst quality, low quality, normal quality),(worst quality, low quality, normal quality),  easynegative, FastNegativeV2
+
+注意：除了两个prompt，不要输出任何额外的内容，不要有中文，不要有任何除了Prompt: 和Negative prompt: 相关内容以外的任何内容
+我给你的主题是：
+
+`
+
+            // 第二个API请求的数据
+            var data2 = {
+                messages: instPrompt+textInput
+            };
+
+            // 第二个API请求的Promise对象
+            var promise2 = new Promise(function(resolve, reject) {
+                axios.post(apiUrl2, data2)
+                    .then(response=> {
+                        var response2Text = response.data['reply']; // 将 response['reply'] 的值分配给 response2Text
+                        console.log(response2Text)
+                        resolve(response2Text);
+                    })
+                    .catch(error => reject(error));
+            });
+
+            // 并行执行两个API请求
+            promise2
+                .then(function (response2Text) {
+                    // 处理第二个API的响应
+                    console.log("Response from API 2:", response2Text);
+                    // // 使用正则表达式匹配prompt和negative prompt的内容
+                    // var promptMatch = response2Text.match(/Prompt:([^]*?)Negative prompt:/);
+                    // var negativePromptMatch = response2Text.match(/Negative prompt:([^]*?)(\n|$)/);
+
+                    // // 提取匹配到的内容（去除首尾空格和换行符）
+                    // var prompt = promptMatch ? promptMatch[1].trim() : '';
+                    // var negativePrompt = negativePromptMatch ? negativePromptMatch[1].trim() : '';
+                    var lines = response2Text.split('\n');
+
+                    // 获取前两行的内容
+                    var prompt = '';
+                    var negativePrompt = '';
+
+                    if (lines.length >= 2) {
+                        prompt = lines[0].trim();
+                        negativePrompt = lines[1].trim();
+                        if(negativePrompt[0]!='N'){
+                            negativePrompt = lines[2].trim();
+                        }
+                    }
+
+                    console.log(prompt)
+                    console.log(negativePrompt)
+                    // 将第二个API的响应值设置为第一个API的输入
+                    var data1 = {
+                        "prompt": prompt+',(bonsai),<lora:ShanShuiHua_v18:1>', // 使用第二个API的响应值
+                        "negative_prompt":negativePrompt+',logo, watermark, animals, easynegative, ng_deepnegative_v1_75t',
+                        "steps": 20,
+                        "width": 512,
+                        "height": 512,
+                        "seed": -1,
+                        "batch_size": 9,
+                    };
+                    
+                    // 发送第一个API请求
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("POST", apiUrl1, true);
+                    console.log(apiUrl1)
+                    xhr.setRequestHeader("accept", "application/json");
+                    xhr.setRequestHeader("Content-Type", "application/json");
+
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState === 4) {
+                            if (xhr.status === 200) {
+                                // 处理第一个API的响应
+                                var response1Text = xhr.responseText;
+                                // 请求成功后的处理逻辑
+                                console.log("Request successful");
+
+                                // 创建一个包含图像的容器
+                                var container = document.createElement("div");
+                                container.classList.add("container", "px-5", "my-5");
+
+                                // 创建一个包含图像的行
+                                var row = document.createElement("div");
+                                row.classList.add("row");
+                                row.id = "responseContainer";
+
+
+                                // 将行元素添加到容器中
+                                container.appendChild(row);
+
+                                // 请求成功，将返回的内容显示在页面上
+                                var container = document.getElementById("responseContainer");
+                                container.innerHTML = '';
+                                var responseData = JSON.parse(response1Text);
+
+                                var imageWidth = 300; // 你可以根据需要设置合适的宽度
+                                var imageHeight = 300; // 你可以根据需要设置合适的高度
+
+
+                                // 处理返回的图像信息
+                                responseData.images.forEach(function (imageData, index) {
+                                    var img = new Image();
+                                    img.src = "data:image/png;base64," + imageData;
+                                    img.classList.add("rounded");
+                                    img.width = imageWidth;
+                                    img.height = imageHeight;
+
+                                    // 创建一个链接元素，用于下载PNG文件
+                                    var a = document.createElement("a");
+                                    a.href = img.src;
+                                    a.download = "output_" + index + ".png";
+
+                                    
+                                    // 将图像添加到链接元素中
+                                    a.appendChild(img);
+
+                                    // 添加单击事件处理程序以显示全屏图像
+                                    img.addEventListener("click", function () {
+                                        showFullScreenImage(img.src);
+                                    });
+
+                                    // 创建一个新的列元素
+                                    var col = document.createElement("div");
+                                    col.classList.add("col-4"); // 添加Bootstrap的col类，每行3列
+                                    
+                                    a.style.margin = '0px'
+
+                                    // 将链接元素添加到列元素中
+                                    col.appendChild(a);
+
+                                    // 将列元素添加到容器中
+                                    container.appendChild(col);
+
+                                    // 检查是否需要创建新的行
+                                    if ((index + 1) % 3 === 0) {
+                                        container.appendChild(document.createElement("div"));
+                                    }
+                                });
+                            } else {
+                                // 处理第一个API的错误
+                                console.error("Request to API 1 failed");
+                            }
+
+                            // 最后，将按钮状态还原
+                            generateButton.style.display = "block";
+                            loadingButton.style.display = "none";
+                        }
+                    };
+
+                    // 发送第一个API请求
+                    xhr.send(JSON.stringify(data1));
+                })
+                .catch(function (errors) {
+                    // 处理错误
+                    console.error("Error:", errors);
+
+                    // 最后，将按钮状态还原
+                    generateButton.style.display = "block";
+                    loadingButton.style.display = "none";
+                });
+        }
+        // 显示全屏图像的函数
+        // function showFullScreenImage(imageSource) {
+        //     // 创建一个动态弹出框
+        //     var modal = new bootstrap.Modal(document.createElement("div"), {
+        //         backdrop: "static", // 阻止点击背景关闭弹出框
+        //     });
+
+        //     // 创建一个弹出框的内容容器
+        //     var modalContent = document.createElement("div");
+        //     modalContent.classList.add("modal-content");
+
+        //     // 创建图像元素
+        //     var fullscreenImg = new Image();
+        //     fullscreenImg.src = imageSource;
+        //     fullscreenImg.classList.add("img-fluid");
+
+        //     // 创建关闭按钮
+        //     var closeButton = document.createElement("button");
+        //     closeButton.innerText = "关闭";
+        //     closeButton.classList.add("btn", "btn-secondary");
+
+        //     // 添加关闭按钮的单击事件处理程序
+        //     closeButton.addEventListener("click", function () {
+        //         modal.hide(); // 关闭弹出框
+        //     });
+
+        //     // 将图像和关闭按钮添加到弹出框内容容器
+        //     modalContent.appendChild(fullscreenImg);
+        //     modalContent.appendChild(closeButton);
+
+        //     // 将内容容器添加到弹出框
+        //     modal._element.appendChild(modalContent);
+
+        //     // 显示弹出框
+        //     modal.show();
+        // }
+            // function sendPostRequest() {
+            //     var generateButton = document.getElementById("generateButton");
+            //     var loadingButton = document.getElementById("loadingButton");
+
+            //     // 切换到Loading按钮
+            //     generateButton.style.display = "none";
+            //     loadingButton.style.display = "block";
+
+            //     var textInput = document.getElementById("textInput").value;
+            //     var url = "http://127.0.0.1:7861"; // 你的API端点URL
+
+            //     var data = {
+            //         "prompt": textInput,
+            //         "steps": 20,
+            //         "width": 512,
+            //         "height": 512,
+            //         "seed": -1,
+            //         "batch_size": 9,
+            //     };
+
+            //     // 创建一个Promise对象
+            //     var promise = new Promise(function(resolve, reject) {
+            //         // 创建一个新的XMLHttpRequest对象
+            //         var xhr = new XMLHttpRequest();
+
+            //         // 设置请求方法和URL
+            //         xhr.open("POST", url + "/sdapi/v1/txt2img", true);
+
+            //         // 设置请求头
+            //         xhr.setRequestHeader("accept", "application/json");
+            //         xhr.setRequestHeader("Content-Type", "application/json");
+
+            //         // 监听请求完成事件
+            //         xhr.onreadystatechange = function () {
+            //             if (xhr.readyState === 4) {
+            //                 if (xhr.status === 200) {
+            //                     // 请求成功
+            //                     resolve(xhr.responseText);
+            //                 } else {
+            //                     // 请求失败
+            //                     reject("Request failed");
+            //                 }
+            //             }
+            //         };
+
+            //         // 将数据转换为JSON字符串并发送请求
+            //         xhr.send(JSON.stringify(data));
+            //     });
+
+            //     // 处理Promise的状态
+            //     promise
+            //         .then(function(responseText) {
+            //             // 请求成功后的处理逻辑
+            //             console.log("Request successful");
+
+            //             // 创建一个包含图像的容器
+            //             var container = document.createElement("div");
+            //             container.classList.add("container", "px-5", "my-5");
+
+            //             // 创建一个包含图像的行
+            //             var row = document.createElement("div");
+            //             row.classList.add("row");
+            //             row.id = "responseContainer";
+
+                        
+            //             // 将行元素添加到容器中
+            //             container.appendChild(row);
+
+            //             // 请求成功，将返回的内容显示在页面上
+            //             var container = document.getElementById("responseContainer");
+            //             container.innerHTML = '';
+            //             var responseData = JSON.parse(responseText);
+                        
+            //             var imageWidth = 300; // 你可以根据需要设置合适的宽度
+            //             var imageHeight = 300; // 你可以根据需要设置合适的高度
+
+
+            //             // 处理返回的图像信息
+            //             responseData.images.forEach(function (imageData, index) {
+            //                 var img = new Image();
+            //                 img.src = "data:image/png;base64," + imageData;
+                            
+            //                 img.width = imageWidth;
+            //                 img.height = imageHeight;
+
+            //                 // 创建一个链接元素，用于下载PNG文件
+            //                 var a = document.createElement("a");
+            //                 a.href = img.src;
+            //                 a.download = "output_" + index + ".png";
+
+                            
+            //                 // 将图像添加到链接元素中
+            //                 a.appendChild(img);
+
+            //                 // 创建一个新的列元素
+            //                 var col = document.createElement("div");
+            //                 col.classList.add("col-4"); // 添加Bootstrap的col类，每行3列
+                            
+            //                 a.style.margin = '0px'
+
+            //                 // 将链接元素添加到列元素中
+            //                 col.appendChild(a);
+
+            //                 // 将列元素添加到容器中
+            //                 container.appendChild(col);
+
+            //                 // 检查是否需要创建新的行
+            //                 if ((index + 1) % 3 === 0) {
+            //                     container.appendChild(document.createElement("div"));
+            //                 }
+            //             });
+
+            //             // 最后，将按钮状态还原
+            //             generateButton.style.display = "block";
+            //             loadingButton.style.display = "none";
+            //         })
+            //         .catch(function(error) {
+            //             // 请求失败后的处理逻辑
+            //             console.error("Request failed:", error);
+
+            //             // 最后，将按钮状态还原
+            //             generateButton.style.display = "block";
+            //             loadingButton.style.display = "none";
+            //         });
+            // }
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
